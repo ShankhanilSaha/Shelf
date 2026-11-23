@@ -1,0 +1,135 @@
+package com.example.shelf.buildlogic
+
+import org.gradle.api.DefaultTask
+import org.gradle.api.GradleException
+import org.gradle.api.file.RegularFileProperty
+import org.gradle.api.provider.ListProperty
+import org.gradle.api.provider.MapProperty
+import org.gradle.api.provider.Property
+import org.gradle.api.tasks.Input
+import org.gradle.api.tasks.OutputFile
+import org.gradle.api.tasks.TaskAction
+import org.gradle.work.DisableCachingByDefault
+import org.w3c.dom.Element
+import java.io.File
+import java.util.Locale
+import javax.xml.parsers.DocumentBuilderFactory
+
+/**
+ * Reads the JaCoCo XML report of every module and prints line coverage per module, plus an
+ * aggregate for all `*ViewModel` classes. Optionally fails when an enforced target is missed.
+ */
+@DisableCachingByDefault(because = "Prints a summary; cheap to recompute")
+abstract class CoverageSummaryTask : DefaultTask() {
+
+    /** Module path (for example ":core:data") to the absolute path of its JaCoCo XML report. */
+    @get:Input
+    abstract val reportPaths: MapProperty<String, String>
+
+    /** Module paths whose line coverage must reach [minimumLineCoverage]; "ViewModels" is the aggregate. */
+    @get:Input
+    abstract val enforcedTargets: ListProperty<String>
+
+    /** Between 0.0 and 1.0. Zero disables enforcement. */
+    @get:Input
+    abstract val minimumLineCoverage: Property<Double>
+
+    @get:OutputFile
+    abstract val summaryFile: RegularFileProperty
+
+    @TaskAction
+    fun summarize() {
+        val rows = mutableListOf<Pair<String, Counter>>()
+        val viewModels = Counter()
+        reportPaths.get().toSortedMap().forEach { (module, path) ->
+            val file = File(path)
+            if (!file.exists()) {
+                logger.warn("No coverage report for $module at $path")
+                return@forEach
+            }
+            val report = parse(file)
+            rows += module to report.total
+            viewModels += report.viewModels
+        }
+        if (viewModels.total > 0) rows += VIEW_MODELS to viewModels
+
+        val lines = buildList {
+            add("| Target | Line coverage | Covered / total lines |")
+            add("|---|---:|---:|")
+            rows.forEach { (name, counter) ->
+                add("| `$name` | ${counter.percent()} | ${counter.covered} / ${counter.total} |")
+            }
+        }
+        summaryFile.get().asFile.apply {
+            parentFile.mkdirs()
+            writeText(lines.joinToString(separator = "\n", postfix = "\n"))
+        }
+        logger.lifecycle("Line coverage (JaCoCo, debug unit tests):")
+        rows.forEach { (name, counter) ->
+            logger.lifecycle("  %-28s %7s  (%d/%d)".format(name, counter.percent(), counter.covered, counter.total))
+        }
+
+        val minimum = minimumLineCoverage.get()
+        if (minimum > 0.0) {
+            val failures = rows.filter { (name, counter) ->
+                name in enforcedTargets.get() && counter.ratio() < minimum
+            }
+            if (failures.isNotEmpty()) {
+                val names = failures.joinToString { (name, counter) -> "$name=${counter.percent()}" }
+                val threshold = String.format(Locale.US, "%.0f%%", minimum * PERCENT)
+                throw GradleException("Line coverage below $threshold: $names")
+            }
+        }
+    }
+
+    private fun parse(file: File): ModuleReport {
+        val factory = DocumentBuilderFactory.newInstance().apply {
+            isValidating = false
+            isNamespaceAware = false
+            // JaCoCo reports reference report.dtd; never try to fetch it.
+            setFeature("http://apache.org/xml/features/nonvalidating/load-external-dtd", false)
+        }
+        val root = factory.newDocumentBuilder().parse(file).documentElement
+        val total = root.childElements("counter").lineCounter()
+        val viewModels = Counter()
+        val classes = root.getElementsByTagName("class")
+        for (index in 0 until classes.length) {
+            val element = classes.item(index) as Element
+            val simpleName = element.getAttribute("name").substringAfterLast('/')
+            if (simpleName.substringBefore('$').endsWith("ViewModel")) {
+                viewModels += element.childElements("counter").lineCounter()
+            }
+        }
+        return ModuleReport(total, viewModels)
+    }
+
+    private fun Element.childElements(tag: String): List<Element> {
+        val nodes = childNodes
+        return (0 until nodes.length).mapNotNull { nodes.item(it) as? Element }.filter { it.tagName == tag }
+    }
+
+    private fun List<Element>.lineCounter(): Counter {
+        val line = firstOrNull { it.getAttribute("type") == "LINE" } ?: return Counter()
+        val missed = line.getAttribute("missed").toInt()
+        val covered = line.getAttribute("covered").toInt()
+        return Counter(covered = covered, total = covered + missed)
+    }
+
+    private data class ModuleReport(val total: Counter, val viewModels: Counter)
+
+    private class Counter(var covered: Int = 0, var total: Int = 0) {
+        operator fun plusAssign(other: Counter) {
+            covered += other.covered
+            total += other.total
+        }
+
+        fun ratio(): Double = if (total == 0) 0.0 else covered.toDouble() / total
+
+        fun percent(): String = String.format(Locale.US, "%.1f%%", ratio() * PERCENT)
+    }
+
+    companion object {
+        const val VIEW_MODELS = "ViewModels"
+        private const val PERCENT = 100.0
+    }
+}

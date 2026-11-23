@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Auto Backup for API 26-30: the Room database (library, reading log) and DataStore
+     preferences are user data worth restoring on a new device. Caches are never backed up. -->
+<full-backup-content>
+    <include domain="database" path="." />
+    <include domain="file" path="datastore/" />
+</full-backup-content>

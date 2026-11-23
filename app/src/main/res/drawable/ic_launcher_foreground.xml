@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Three books on a shelf, drawn inside the 66dp adaptive-icon safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="@color/shelf_launcher_foreground"
+        android:pathData="M33,39h9v33h-9z" />
+    <path
+        android:fillColor="@color/shelf_launcher_foreground"
+        android:pathData="M44,33h10v39h-10z" />
+    <path
+        android:fillColor="@color/shelf_launcher_foreground"
+        android:pathData="M57,72L65,72L76,42L68,39Z" />
+    <path
+        android:fillColor="@color/shelf_launcher_foreground"
+        android:pathData="M29,73h50v4h-50z" />
+    <path
+        android:fillColor="@color/shelf_launcher_background"
+        android:pathData="M35,45h5v2h-5zM46,40h6v2h-6z" />
+</vector>

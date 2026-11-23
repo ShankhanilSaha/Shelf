@@ -1,0 +1,26 @@
+# Gradle / build outputs
+.gradle/
+.kotlin/
+build/
+/captures
+.externalNativeBuild/
+.cxx/
+
+# IDE
+*.iml
+.idea/
+.vscode/
+.fleet/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local configuration (machine specific)
+/local.properties
+
+# Secrets: never commit these. Copy app/google-services.json.example to enable Firebase.
+app/google-services.json
+*.jks
+*.keystore
+keystore.properties
