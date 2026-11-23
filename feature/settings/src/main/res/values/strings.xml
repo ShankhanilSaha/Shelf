@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Settings</string>
+
+    <string name="settings_section_appearance">Appearance</string>
+    <string name="settings_theme">Theme</string>
+    <string name="settings_theme_system">System default</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_dynamic_color">Dynamic color</string>
+    <string name="settings_dynamic_color_summary">Use colors from your wallpaper</string>
+
+    <string name="settings_section_reading">Reading</string>
+    <string name="settings_daily_goal">Daily goal</string>
+    <plurals name="settings_goal_pages">
+        <item quantity="one">%1$d page a day</item>
+        <item quantity="other">%1$d pages a day</item>
+    </plurals>
+    <plurals name="settings_goal_minutes">
+        <item quantity="one">%1$d minute a day</item>
+        <item quantity="other">%1$d minutes a day</item>
+    </plurals>
+    <string name="settings_goal_type_pages">Pages</string>
+    <string name="settings_goal_type_minutes">Minutes</string>
+    <string name="settings_goal_target_pages">Pages per day</string>
+    <string name="settings_goal_target_minutes">Minutes per day</string>
+    <string name="settings_goal_range">Between %1$d and %2$d</string>
+    <string name="settings_default_shelf">Default shelf for new books</string>
+
+    <string name="settings_section_reminders">Reminders</string>
+    <string name="settings_reminder">Daily reminder</string>
+    <string name="settings_reminder_summary">A notification to help you keep your streak</string>
+    <string name="settings_reminder_time">Reminder time</string>
+    <string name="settings_notifications_blocked">Notifications are turned off for Shelf, so reminders can\'t be shown.</string>
+    <string name="settings_open_system_settings">Settings</string>
+
+    <string name="settings_section_sync">Sync</string>
+    <string name="settings_sign_in">Sign in to sync</string>
+    <string name="settings_sign_in_summary">Back up your library and use it on other devices</string>
+    <string name="settings_syncing_as">Your library syncs with %1$s</string>
+    <string name="settings_sign_out">Sign out</string>
+    <string name="settings_sign_out_summary">Stop syncing on this device</string>
+    <string name="settings_sign_out_title">Sign out?</string>
+    <string name="settings_sign_out_message">Your library stays on this device and keeps working offline. Anything already synced stays in your account.</string>
+    <string name="settings_sign_out_clear">Also remove my library and reading log from this device</string>
+    <string name="settings_signed_out">Signed out. Your library is still here.</string>
+    <string name="settings_signed_out_cleared">Signed out and removed your library from this device.</string>
+
+    <string name="settings_section_data">Data</string>
+    <string name="settings_export">Export library</string>
+    <string name="settings_export_summary">Save your books and reading log as a JSON file</string>
+    <plurals name="settings_export_done">
+        <item quantity="one">Exported %1$d book and %2$d reading sessions</item>
+        <item quantity="other">Exported %1$d books and %2$d reading sessions</item>
+    </plurals>
+    <string name="settings_export_failed">Couldn\'t write the file. Try another location.</string>
+
+    <string name="settings_section_about">About</string>
+    <string name="settings_version">Version</string>
+</resources>

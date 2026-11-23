@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scanner_hint">Point the camera at the barcode on the back of a book.</string>
+    <string name="scanner_not_a_book">That barcode isn\'t an ISBN. Look for the one starting with 978 or 979.</string>
+    <string name="scanner_torch_on">Turn on the flashlight</string>
+    <string name="scanner_torch_off">Turn off the flashlight</string>
+    <string name="scanner_enter_isbn">Enter ISBN</string>
+    <string name="scanner_enter_manually">Enter ISBN manually</string>
+
+    <string name="scanner_permission_title">Scan books with your camera</string>
+    <string name="scanner_permission_message">Shelf uses the camera only to read the barcode on a book. You can also type the ISBN instead.</string>
+    <string name="scanner_allow_camera">Allow camera</string>
+    <string name="scanner_permission_blocked_title">Camera access is turned off</string>
+    <string name="scanner_permission_blocked_message">To scan barcodes, allow camera access for Shelf in system settings, or type the ISBN instead.</string>
+    <string name="scanner_open_settings">Open settings</string>
+    <string name="scanner_no_camera_title">No camera available</string>
+    <string name="scanner_no_camera_message">This device has no back camera Shelf can use. You can still type the ISBN.</string>
+
+    <string name="scanner_looking_up">Looking up ISBN %1$s…</string>
+    <string name="scanner_not_found_title">Not in Open Library</string>
+    <string name="scanner_not_found_message">No book with ISBN %1$s was found. Check the number or search by title instead.</string>
+    <string name="scanner_scan_again">Scan again</string>
+    <string name="scanner_open_details">Open details</string>
+    <string name="scanner_add_to">Add to %1$s</string>
+    <string name="scanner_on_shelf">On %1$s</string>
+
+    <string name="scanner_isbn_label">ISBN</string>
+    <string name="scanner_isbn_help">10 or 13 digits, as printed on the book</string>
+    <string name="scanner_isbn_invalid">That doesn\'t look like a valid ISBN. Check the digits.</string>
+    <string name="scanner_look_up">Look up</string>
+</resources>

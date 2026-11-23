@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Monochrome book glyph for the status bar (notification icons must be single-color). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M4,4h4v15h-4zM9,3h4v16h-4zM14.6,19.4l-1.9,-0.7l4.7,-13l1.9,0.7zM3,20h18v1.5h-18z" />
+</vector>

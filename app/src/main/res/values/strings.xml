@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Shelf</string>
+
+    <!-- Navigation -->
+    <string name="nav_library">Library</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- First launch -->
+    <string name="welcome_title">Welcome to Shelf</string>
+    <string name="welcome_point_find">Find books by title or author, or scan the barcode on the back.</string>
+    <string name="welcome_point_shelves">Keep them on three shelves: want to read, reading and finished.</string>
+    <string name="welcome_point_goal">Log your reading, set a daily goal and keep your streak going.</string>
+    <string name="welcome_point_offline">Everything works offline. Signing in to sync is optional.</string>
+    <string name="welcome_get_started">Get started</string>
 </resources>

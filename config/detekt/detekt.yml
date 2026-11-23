@@ -30,7 +30,7 @@ naming:
 
 style:
   MagicNumber:
-    ignoreAnnotated: ['Composable', 'Preview']
+    ignoreAnnotated: ['Composable', 'Preview', 'ThemePreviews', 'FontScalePreviews', 'ScreenPreviews']
     ignorePropertyDeclaration: true
     ignoreCompanionObjectPropertyDeclaration: true
   MaxLineLength:
@@ -38,4 +38,5 @@ style:
   ReturnCount:
     max: 3
   UnusedPrivateMember:
-    ignoreAnnotated: ['Preview']
+    # Previews are private and only used by the IDE and screenshot tests.
+    ignoreAnnotated: ['Preview', 'ThemePreviews', 'FontScalePreviews', 'ScreenPreviews']

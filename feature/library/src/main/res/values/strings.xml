@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library_title">Library</string>
+    <string name="library_scan">Scan ISBN</string>
+    <string name="library_add_book">Add book</string>
+    <string name="library_find_book">Find a book</string>
+    <!-- Tab label: shelf name and number of books on it. -->
+    <string name="library_tab">%1$s (%2$d)</string>
+
+    <string name="library_empty_want_title">Nothing on your list yet</string>
+    <string name="library_empty_want_message">Books you want to read later will wait for you here.</string>
+    <string name="library_empty_reading_title">Not reading anything right now</string>
+    <string name="library_empty_reading_message">Start a book from your list or find a new one to track your progress.</string>
+    <string name="library_empty_finished_title">No finished books yet</string>
+    <string name="library_empty_finished_message">Books you finish show up here with your rating.</string>
+
+    <string name="library_page_of">Page %1$d of %2$d</string>
+    <plurals name="library_on_page">
+        <item quantity="one">On page %1$d</item>
+        <item quantity="other">On page %1$d</item>
+    </plurals>
+    <string name="library_removed">Removed “%1$s”</string>
+    <string name="library_remove">Remove from library</string>
+    <string name="library_remove_title">Remove this book?</string>
+    <string name="library_remove_message">“%1$s” will be removed from your shelves. Your reading log stays.</string>
+
+    <string name="library_view_details">View book details</string>
+    <string name="library_section_shelf">Shelf</string>
+    <string name="library_section_progress">Progress</string>
+    <string name="library_section_notes">Notes</string>
+    <string name="library_current_page">Current page</string>
+    <string name="library_update_page">Update</string>
+    <string name="library_progress_summary">Page %1$d of %2$d (%3$d%%)</string>
+    <string name="library_progress_saved">Progress saved</string>
+    <string name="library_notes_label">Your notes</string>
+    <string name="library_notes_hint">Saved automatically</string>
+    <string name="library_rate_title">You finished “%1$s”</string>
+    <string name="library_rate_message">How would you rate it?</string>
+    <string name="library_rate_later">Not now</string>
+</resources>

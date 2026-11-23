@@ -4,4 +4,11 @@
     <style name="Theme.Shelf" parent="android:Theme.Material.Light.NoActionBar">
         <item name="android:windowBackground">@color/shelf_window_background</item>
     </style>
+
+    <!-- Shown while preferences load; then the activity switches to Theme.Shelf. -->
+    <style name="Theme.Shelf.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/shelf_window_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_splash</item>
+        <item name="postSplashScreenTheme">@style/Theme.Shelf</item>
+    </style>
 </resources>

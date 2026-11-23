@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.shelf.android.feature)
+    alias(libs.plugins.shelf.android.screenshot)
 }
 
 android {

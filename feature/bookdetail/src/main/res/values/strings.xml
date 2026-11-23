@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="bookdetail_add_to">Add to %1$s</string>
+    <string name="bookdetail_on_shelf">On %1$s</string>
+    <string name="bookdetail_choose_shelf">Choose a shelf</string>
+    <string name="bookdetail_remove">Remove from library</string>
+    <string name="bookdetail_added_to">Added to %1$s</string>
+    <string name="bookdetail_moved_to">Moved to %1$s</string>
+    <string name="bookdetail_removed">Removed from your library</string>
+    <string name="bookdetail_refresh_failed">Couldn\'t load all details. Showing what\'s saved.</string>
+    <string name="bookdetail_about">About this book</string>
+    <string name="bookdetail_subjects">Subjects</string>
+    <string name="bookdetail_show_more">Show more</string>
+    <string name="bookdetail_show_less">Show less</string>
+    <string name="bookdetail_no_description">Open Library has no description for this book yet.</string>
+</resources>

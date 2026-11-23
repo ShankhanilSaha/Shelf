@@ -44,8 +44,8 @@ jobs:
       - name: Unit tests
         run: ./gradlew test
 
-      - name: Coverage report
-        run: ./gradlew coverageReport
+      - name: Coverage (at least 70% of lines in :core:data and in ViewModels)
+        run: ./gradlew coverageReport -Pcoverage.minimum=0.7
 
       - name: Assemble debug APK
         run: ./gradlew assembleDebug

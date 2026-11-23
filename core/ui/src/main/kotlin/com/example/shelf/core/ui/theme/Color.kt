@@ -1,0 +1,88 @@
+package com.example.shelf.core.ui.theme
+
+import androidx.compose.material3.ColorScheme
+import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.lightColorScheme
+import androidx.compose.ui.graphics.Color
+
+// Hand-made fallback palette used when dynamic color is off or unavailable (API < 31).
+// Primary: a warm leather brown; tertiary: a library-green accent. Every on-color pair has a
+// contrast ratio of at least 4.5:1 against its container.
+
+internal val ShelfLightColors: ColorScheme = lightColorScheme(
+    primary = Color(0xFF8B4A2B),
+    onPrimary = Color(0xFFFFFFFF),
+    primaryContainer = Color(0xFFFFDBCB),
+    onPrimaryContainer = Color(0xFF351000),
+    inversePrimary = Color(0xFFFFB693),
+    secondary = Color(0xFF77574A),
+    onSecondary = Color(0xFFFFFFFF),
+    secondaryContainer = Color(0xFFFFDBCD),
+    onSecondaryContainer = Color(0xFF2C160C),
+    tertiary = Color(0xFF2E6A5F),
+    onTertiary = Color(0xFFFFFFFF),
+    tertiaryContainer = Color(0xFFB1F0E2),
+    onTertiaryContainer = Color(0xFF00201B),
+    background = Color(0xFFFFF8F5),
+    onBackground = Color(0xFF221A16),
+    surface = Color(0xFFFFF8F5),
+    onSurface = Color(0xFF221A16),
+    surfaceVariant = Color(0xFFF4DED5),
+    onSurfaceVariant = Color(0xFF52443D),
+    surfaceTint = Color(0xFF8B4A2B),
+    inverseSurface = Color(0xFF382E2A),
+    inverseOnSurface = Color(0xFFFFEDE6),
+    error = Color(0xFFBA1A1A),
+    onError = Color(0xFFFFFFFF),
+    errorContainer = Color(0xFFFFDAD6),
+    onErrorContainer = Color(0xFF410002),
+    outline = Color(0xFF85736C),
+    outlineVariant = Color(0xFFD7C2B9),
+    scrim = Color(0xFF000000),
+    surfaceBright = Color(0xFFFFF8F5),
+    surfaceDim = Color(0xFFE8D7D0),
+    surfaceContainerLowest = Color(0xFFFFFFFF),
+    surfaceContainerLow = Color(0xFFFFF1EB),
+    surfaceContainer = Color(0xFFFCEAE3),
+    surfaceContainerHigh = Color(0xFFF6E5DD),
+    surfaceContainerHighest = Color(0xFFF0DFD8),
+)
+
+internal val ShelfDarkColors: ColorScheme = darkColorScheme(
+    primary = Color(0xFFFFB693),
+    onPrimary = Color(0xFF552000),
+    primaryContainer = Color(0xFF6F3517),
+    onPrimaryContainer = Color(0xFFFFDBCB),
+    inversePrimary = Color(0xFF8B4A2B),
+    secondary = Color(0xFFE7BEAE),
+    onSecondary = Color(0xFF442A1F),
+    secondaryContainer = Color(0xFF5D4034),
+    onSecondaryContainer = Color(0xFFFFDBCD),
+    tertiary = Color(0xFF95D4C6),
+    onTertiary = Color(0xFF003731),
+    tertiaryContainer = Color(0xFF0F5047),
+    onTertiaryContainer = Color(0xFFB1F0E2),
+    background = Color(0xFF1A120E),
+    onBackground = Color(0xFFF0DFD8),
+    surface = Color(0xFF1A120E),
+    onSurface = Color(0xFFF0DFD8),
+    surfaceVariant = Color(0xFF52443D),
+    onSurfaceVariant = Color(0xFFD7C2B9),
+    surfaceTint = Color(0xFFFFB693),
+    inverseSurface = Color(0xFFF0DFD8),
+    inverseOnSurface = Color(0xFF382E2A),
+    error = Color(0xFFFFB4AB),
+    onError = Color(0xFF690005),
+    errorContainer = Color(0xFF93000A),
+    onErrorContainer = Color(0xFFFFDAD6),
+    outline = Color(0xFFA08D85),
+    outlineVariant = Color(0xFF52443D),
+    scrim = Color(0xFF000000),
+    surfaceBright = Color(0xFF42372F),
+    surfaceDim = Color(0xFF1A120E),
+    surfaceContainerLowest = Color(0xFF140D0A),
+    surfaceContainerLow = Color(0xFF221A16),
+    surfaceContainer = Color(0xFF271E1A),
+    surfaceContainerHigh = Color(0xFF322824),
+    surfaceContainerHighest = Color(0xFF3D332E),
+)

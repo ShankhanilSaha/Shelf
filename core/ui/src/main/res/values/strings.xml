@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Shelves -->
+    <string name="ui_shelf_want_to_read">Want to read</string>
+    <string name="ui_shelf_reading">Reading</string>
+    <string name="ui_shelf_finished">Finished</string>
+
+    <!-- Book presentation -->
+    <string name="ui_cover_description">Cover of %1$s</string>
+    <string name="ui_unknown_author">Unknown author</string>
+    <string name="ui_published_in">First published %1$d</string>
+    <plurals name="ui_page_count">
+        <item quantity="one">%1$d page</item>
+        <item quantity="other">%1$d pages</item>
+    </plurals>
+
+    <!-- Rating -->
+    <string name="ui_rating_label">Rating</string>
+    <string name="ui_rating_none">Not rated</string>
+    <plurals name="ui_rating_value">
+        <item quantity="one">Rated %1$d star out of 5</item>
+        <item quantity="other">Rated %1$d stars out of 5</item>
+    </plurals>
+    <plurals name="ui_rating_option">
+        <item quantity="one">%1$d star</item>
+        <item quantity="other">%1$d stars</item>
+    </plurals>
+
+    <!-- Common states and actions -->
+    <string name="ui_loading">Loading</string>
+    <string name="ui_retry">Retry</string>
+    <string name="ui_navigate_up">Navigate up</string>
+    <string name="ui_clear">Clear</string>
+    <string name="ui_undo">Undo</string>
+    <string name="ui_cancel">Cancel</string>
+    <string name="ui_save">Save</string>
+    <string name="ui_ok">OK</string>
+
+    <!-- Errors -->
+    <string name="ui_error_network">You\'re offline. Check your connection and try again.</string>
+    <string name="ui_error_not_found">We couldn\'t find that.</string>
+    <string name="ui_error_server">Open Library is having trouble right now. Try again in a moment.</string>
+    <string name="ui_error_unavailable">This needs cloud sync, which isn\'t set up in this build.</string>
+    <string name="ui_error_unknown">Something went wrong. Please try again.</string>
+</resources>

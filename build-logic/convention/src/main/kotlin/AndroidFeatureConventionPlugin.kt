@@ -23,6 +23,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 "implementation"(project(":core:model"))
                 "implementation"(project(":core:ui"))
 
+                "implementation"(libs.library("androidx-activity-compose"))
                 "implementation"(libs.library("androidx-hilt-lifecycle-viewmodel-compose"))
                 "implementation"(libs.library("androidx-lifecycle-runtime-compose"))
                 "implementation"(libs.library("androidx-lifecycle-viewmodel-compose"))
@@ -32,6 +33,12 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 "testImplementation"(libs.library("androidx-compose-ui-test-junit4"))
                 "testImplementation"(libs.library("robolectric"))
                 "debugImplementation"(libs.library("androidx-compose-ui-test-manifest"))
+
+                // Instrumented accessibility checks (ATF), which need a device on API 34+.
+                "androidTestImplementation"(libs.library("androidx-compose-ui-test-junit4"))
+                "androidTestImplementation"(libs.library("androidx-compose-ui-test-accessibility"))
+                "androidTestImplementation"(libs.library("androidx-test-ext-junit"))
+                "androidTestImplementation"(libs.library("androidx-test-runner"))
             }
         }
     }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_reminder_channel_name">Reading reminders</string>
+    <string name="data_reminder_channel_description">A daily nudge to read, at the time you choose in Settings.</string>
+    <string name="data_reminder_title">Time to read</string>
+    <plurals name="data_reminder_text_pages">
+        <item quantity="one">Your goal today is %1$d page. Tap to log your reading.</item>
+        <item quantity="other">Your goal today is %1$d pages. Tap to log your reading.</item>
+    </plurals>
+    <plurals name="data_reminder_text_minutes">
+        <item quantity="one">Your goal today is %1$d minute of reading. Tap to log it.</item>
+        <item quantity="other">Your goal today is %1$d minutes of reading. Tap to log it.</item>
+    </plurals>
+</resources>

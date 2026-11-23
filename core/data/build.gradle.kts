@@ -9,9 +9,27 @@ android {
 }
 
 dependencies {
+    api(projects.core.common)
     api(projects.core.model)
-    implementation(projects.core.common)
+    api(libs.androidx.paging.common)
+    api(libs.kotlinx.coroutines.core)
     implementation(projects.core.database)
     implementation(projects.core.datastore)
     implementation(projects.core.network)
+
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.hilt.work)
+    implementation(libs.androidx.work.runtime)
+    implementation(libs.kotlinx.serialization.json)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
+    implementation(libs.kotlinx.coroutines.play.services)
+    ksp(libs.androidx.hilt.compiler)
+
+    testImplementation(projects.core.testing)
+    testImplementation(libs.androidx.paging.testing)
+    testImplementation(libs.androidx.work.testing)
+    testImplementation(libs.okhttp.mockwebserver)
+    testImplementation(libs.robolectric)
 }

@@ -55,6 +55,10 @@ gradlePlugin {
             id = libs.plugins.shelf.android.feature.get().pluginId
             implementationClass = "AndroidFeatureConventionPlugin"
         }
+        register("androidScreenshot") {
+            id = libs.plugins.shelf.android.screenshot.get().pluginId
+            implementationClass = "AndroidScreenshotConventionPlugin"
+        }
         register("androidRoom") {
             id = libs.plugins.shelf.android.room.get().pluginId
             implementationClass = "AndroidRoomConventionPlugin"

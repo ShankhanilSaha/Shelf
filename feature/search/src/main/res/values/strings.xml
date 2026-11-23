@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="search_field_label">Search by title or author</string>
+    <string name="search_clear_query">Clear search</string>
+    <string name="search_scan">Scan ISBN</string>
+    <string name="search_recent_title">Recent searches</string>
+    <string name="search_recent_clear">Clear</string>
+    <string name="search_idle_title">Find your next book</string>
+    <string name="search_idle_message">Search Open Library by title or author, or scan the barcode on the back of a book.</string>
+    <string name="search_empty_title">No books found</string>
+    <string name="search_empty_message">Nothing matched “%1$s”. Check the spelling or try fewer words.</string>
+    <string name="search_append_error">Couldn\'t load more results.</string>
+    <string name="search_retry">Retry</string>
+    <string name="search_unknown_author">Unknown author</string>
+    <string name="search_first_published">First published %1$d</string>
+</resources>

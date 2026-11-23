@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stats_title">Stats</string>
+    <string name="stats_log_reading">Log reading</string>
+    <string name="stats_today">Today</string>
+    <string name="stats_goal_met">Goal reached. Nice work!</string>
+    <string name="stats_goal_not_met">Keep going to reach today\'s goal.</string>
+    <string name="stats_this_week">Last 7 days</string>
+    <string name="stats_recent_sessions">Recent sessions</string>
+    <string name="stats_no_sessions">No reading logged yet. Tap “Log reading” after your next session.</string>
+    <string name="stats_session_no_book">Reading session</string>
+    <!-- Date, then amounts such as "12 pages, 20 minutes". -->
+    <string name="stats_session_summary">%1$s · %2$s</string>
+    <string name="stats_delete_session">Delete session</string>
+
+    <plurals name="stats_current_streak">
+        <item quantity="one">day streak</item>
+        <item quantity="other">day streak</item>
+    </plurals>
+    <plurals name="stats_longest_streak">
+        <item quantity="one">day longest streak</item>
+        <item quantity="other">days longest streak</item>
+    </plurals>
+    <plurals name="stats_finished_this_year">
+        <item quantity="one">book finished this year</item>
+        <item quantity="other">books finished this year</item>
+    </plurals>
+
+    <!-- "12 of 20 pages"; the quantity is the goal. -->
+    <plurals name="stats_pages_of_goal">
+        <item quantity="one">%1$d of %2$d page</item>
+        <item quantity="other">%1$d of %2$d pages</item>
+    </plurals>
+    <plurals name="stats_minutes_of_goal">
+        <item quantity="one">%1$d of %2$d minute</item>
+        <item quantity="other">%1$d of %2$d minutes</item>
+    </plurals>
+    <plurals name="stats_of_pages">
+        <item quantity="one">of %1$d page</item>
+        <item quantity="other">of %1$d pages</item>
+    </plurals>
+    <plurals name="stats_of_minutes">
+        <item quantity="one">of %1$d minute</item>
+        <item quantity="other">of %1$d minutes</item>
+    </plurals>
+    <plurals name="stats_amount_pages">
+        <item quantity="one">%1$d page</item>
+        <item quantity="other">%1$d pages</item>
+    </plurals>
+    <plurals name="stats_amount_minutes">
+        <item quantity="one">%1$d minute</item>
+        <item quantity="other">%1$d minutes</item>
+    </plurals>
+    <!-- Text alternative for the bar chart: the list of days, then the goal. -->
+    <string name="stats_week_description">Reading in the last 7 days: %1$s. Daily goal %2$s.</string>
+
+    <string name="stats_book_label">Book</string>
+    <string name="stats_no_particular_book">No particular book</string>
+    <string name="stats_no_reading_books">Books on your Reading shelf appear here</string>
+    <string name="stats_pages_label">Pages</string>
+    <string name="stats_minutes_label">Minutes</string>
+    <string name="stats_date_today">Date: today (%1$s)</string>
+    <string name="stats_date_value">Date: %1$s</string>
+</resources>
